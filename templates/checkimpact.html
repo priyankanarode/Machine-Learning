@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ImpactofFacbook</title>
+		<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+	</head>
+	<body>
+		
+<div class="jumbotron text-left">
+    <h1></h1>
+    <p class="lead"></p>
+    <form action="{{ url_for('predict')}}"method="post">
+      
+    <label for="fname">Percentage of previous year</label><br>
+    <input type="text" name="result" placeholder="result" required="required" /><br>
+    <label for="lname">Do you have Facebook Account? </label><br>
+    <input type="text" name="account" placeholder="account" required="required" /><br>
+    <label for="female">For Which purpose you are using Facebook? (Education:1 , Entertainment:0 )</label><br>
+    <input type="text" name="pupose" placeholder="purpose" required="required" /><br>
+    <label for="lname">How many hours you used facebook daily? </label><br>
+    <input type="text" name="hours" placeholder="hours" required="required" /><br>
+ <br>
+    <input type="submit" value="Predict impact">
+    </form>
+
+<br>
+{{ prediction_text }}
+   <h5>For bad impact:0, For good impact:1</h5>
+
+</div>
+
+
+		 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" ><center>Check Impact of Facebook on University Student</center></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          
+         
+      </div>
+    </nav>
+		<div class="container">
+		
+	</div>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+		</script>
+	</body>
+</html>
